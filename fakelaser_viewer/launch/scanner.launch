@@ -1,0 +1,9 @@
+<launch>
+
+<node name="scanner" pkg="fakelaser_viewer" type="scan_publisher" required="true" />
+
+<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 1.57 0 0 robot_frame/world sensor_frame/world 100" />
+
+<node pkg="rviz" type="rviz" name="rviz_display" args="-d /home/ajith92/.ros/ajith_scanner3.rviz" />
+
+</launch>
